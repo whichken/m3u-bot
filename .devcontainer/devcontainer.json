@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/javascript-node-lts
+{
+  "name": "Serverless (Node.js 10.16.3)",
+  "dockerFile": "Dockerfile",
+
+  // Uncomment the next line if you want to publish any ports.
+  "appPort": [3000],
+
+  // Uncomment the next line if you want to add in default container specific settings.json values
+  "settings": {
+    "tslint.packageManager": "yarn",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "prettier.printWidth": 120
+  },
+
+  // Uncomment the next line to run commands after the container is created.
+  "postCreateCommand": "yarn install",
+
+  "extensions": ["esbenp.prettier-vscode", "ms-vscode.vscode-typescript-tslint-plugin", "ms-azuretools.vscode-docker"]
+}
